@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tangji.qa.batterylog">
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".BatteryLogApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BattertLog">
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.tangji.qa.batterylog.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity
+            android:name=".LineListActivity"
+            android:parentActivityName=".TestListActivity" />
+        <activity
+            android:name=".LineChartActivity"
+            android:parentActivityName=".TestListActivity" />
+        <activity
+            android:name=".TestListActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".MainActivity"
+            android:launchMode="singleTask"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".BatteryLogService"
+            android:enabled="true"
+            android:exported="true"
+            android:priority="1000" />
+
+        <receiver android:name=".BootBroadcastReceiver">
+            <intent-filter>
+                  
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                  
+                <category android:name="android.intent.category.LAUNCHER" />
+                  
+                          
+            </intent-filter>
+               
+        </receiver>
+
+    </application>
+
+</manifest>

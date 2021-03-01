@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">BatteryLog</string>
+
+
+    <string name="status">status</string>
+    <string name="health">health</string>
+    <string name="present">present</string>
+    <string name="level">level</string>
+    <string name="scale">scale</string>
+    <string name="icon_small">icon small</string>
+    <string name="plugged">plugged</string>
+    <string name="voltage">voltage</string>
+    <string name="temperature">temperature</string>
+    <string name="technology">technology</string>
+    <string name="service_runing_notification">battery log is run</string>
+    <string name="stopBatteryLogService">Stop BatteryLog Service</string>
+    <string name="startBatteryLogService">Start BatteryLog Service</string>
+    <string name="BATTERY_STATUS_UNKNOWN">BATTERY_STATUS_UNKNOWN</string>
+    <string name="BATTERY_STATUS_CHARGING">BATTERY_STATUS_CHARGING</string>
+    <string name="BATTERY_STATUS_DISCHARGING">BATTERY_STATUS_DISCHARGING</string>
+    <string name="BATTERY_STATUS_NOT_CHARGING">BATTERY_STATUS_NOT_CHARGING</string>
+    <string name="BATTERY_STATUS_FULL">BATTERY_STATUS_FULL</string>
+    <string name="BATTERY_HEALTH_UNKNOWN">BATTERY_HEALTH_UNKNOWN</string>
+    <string name="BATTERY_HEALTH_GOOD">BATTERY_HEALTH_GOOD</string>
+    <string name="BATTERY_HEALTH_OVERHEAT">BATTERY_HEALTH_OVERHEAT</string>
+    <string name="BATTERY_HEALTH_DEAD">BATTERY_HEALTH_DEAD</string>
+    <string name="BATTERY_HEALTH_OVER_VOLTAGE">BATTERY_HEALTH_OVER_VOLTAGE</string>
+    <string name="BATTERY_HEALTH_UNSPECIFIED_FAILURE">BATTERY_HEALTH_UNSPECIFIED_FAILURE</string>
+    <string name="BATTERY_HEALTH_COLD">BATTERY_HEALTH_COLD</string>
+    <string name="BATTERY_PLUGGED_AC">BATTERY_PLUGGED_AC</string>
+    <string name="BATTERY_PLUGGED_USB">BATTERY_PLUGGED_USB</string>
+    <string name="BATTERY_PLUGGED_WIRELESS">BATTERY_PLUGGED_WIRELESS</string>
+    <string name="BATTERY_HAVE_BATTERY">BATTERY_HAVE_BATTERY</string>
+    <string name="NO_BATTERY">NO_BATTERY</string>
+    <string name="BATTERY_PLUGGED_NO">BATTERY_PLUGGED_NO</string>
+    <string name="main_menu_setting_item">setting</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="is_boot_run">is_boot_run</string>
+    <string name="current">current</string>
+    <string name="capacity">Battery capacity</string>
+    <string name="energy">"Battery remaining energy"</string>
+    <string name="alert">Alert</string>
+    <string name="alert_massage">Are you sure to delete this data? Unable to restore after deletion!</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="alert_massage_all">Are you sure to delete all data? Unable to restore after deletion!</string>
+    <string name="log_list">History</string>
+    <string name="open_the_chart">Open the chart</string>
+    <string name="open_list">Open list</string>
+    <string name="delete">Delete</string>
+    <string name="delete_all">Delete All</string>
+    <string name="save_data_as">Save data as</string>
+    <string name="battery_full_mas">The battery is full, please remove the charger and start recording</string>
+    <string name="open_app">OPEN APP</string>
+    <string name="time">time</string>
+</resources>
