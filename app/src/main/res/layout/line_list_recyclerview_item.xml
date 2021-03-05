@@ -4,51 +4,51 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="1dp"
-    android:background="#3F51B5"
+    android:background="?attr/colorPrimary"
     android:orientation="horizontal">
 
     <TextView
+        android:textColor="?attr/colorOnPrimary"
         android:id="@+id/textViewTime"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="center_horizontal"
-        android:textColor="@color/white1"
          />
 
     <TextView
+        android:textColor="?attr/colorOnPrimary"
         android:id="@+id/textViewLevel"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="center_horizontal"
-        android:textColor="@color/white1"
         />
 
     <TextView
+        android:textColor="?attr/colorOnPrimary"
         android:id="@+id/textViewTemperature"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="center_horizontal"
-        android:textColor="@color/white1"
         />
 
     <TextView
+        android:textColor="?attr/colorOnPrimary"
         android:id="@+id/textViewVoltage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="center_horizontal"
-        android:textColor="@color/white1"
          />
 
     <TextView
+        android:textColor="?attr/colorOnPrimary"
         android:id="@+id/textViewPlugged"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="center_horizontal"
-        android:textColor="@color/white1"
         />
 </LinearLayout>

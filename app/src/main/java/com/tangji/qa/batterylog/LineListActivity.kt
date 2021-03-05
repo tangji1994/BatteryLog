@@ -31,6 +31,8 @@ class LineListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_line_list)
+//        window.statusBarColor=getColor(R.color.button_color)
+//        window.navigationBarColor=getColor(R.color.button_color)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         title=longToDate(intent.getLongExtra("testTitle", 0))
         recyclerView = findViewById<View>(R.id.lineListActivity_recyclerView) as RecyclerView

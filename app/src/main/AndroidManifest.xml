@@ -14,7 +14,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.BattertLog">
+        android:theme="@style/Theme.BatteryLog"
+        >
+        <activity android:name=".AboutActivity"></activity>
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -29,7 +31,8 @@
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings"
-            android:parentActivityName=".MainActivity"></activity>
+
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".LineListActivity"
             android:parentActivityName=".TestListActivity" />
@@ -39,7 +42,8 @@
         <activity
             android:name=".TestListActivity"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:launchMode="singleTask"
             >
             <intent-filter>
@@ -57,16 +61,10 @@
 
         <receiver android:name=".BootBroadcastReceiver">
             <intent-filter>
-                  
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
-                  
                 <category android:name="android.intent.category.LAUNCHER" />
-                  
-                          
             </intent-filter>
-               
         </receiver>
-
     </application>
 
 </manifest>
