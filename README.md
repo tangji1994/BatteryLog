@@ -1,5 +1,5 @@
 # BatteryLog
-电池Log记录是一款记录电池电压电流温度等参数的软件，可以用于测试电池的充放电曲线和温度。记录的数据可以绘制成曲线图，也可以导出保存成CVS格式。
+Batterylog is a software to record the battery voltage, current, temperature and other parameters, which can be used to test the charge discharge curve and temperature of the battery. The recorded data can be drawn as a graph or exported and saved in CVS format.
 # License
 Copyright © 2021 tangji1994@qq.com. All Rights Reserved.
 <br>Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,7 +14,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-本项目引用了如下开源项目代码
+This project refers to the following open source project code
 MPAndroidChart
 
     https://github.com/PhilJay/MPAndroidChart
