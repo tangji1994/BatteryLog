@@ -1,5 +1,5 @@
 # BatteryLog
-Batterylog is a software to record the battery voltage, current, temperature and other parameters, which can be used to test the charge discharge curve and temperature of the battery. The recorded data can be drawn as a graph or exported and saved in CVS format.
+Batterylog is a APP to record the battery voltage, current, temperature and other parameters, which can be used to test the charge discharge curve and temperature of the battery. The recorded data can be drawn as a graph or exported and saved in CVS format.
 # License
 Copyright © 2021 tangji1994@qq.com. All Rights Reserved.
 <br>Licensed under the Apache License, Version 2.0 (the "License");
