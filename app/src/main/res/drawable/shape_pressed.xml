@@ -2,8 +2,8 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
     <corners
-    android:radius="10dp"/>
+    android:radius="5dp"/>
     <gradient
-        android:startColor = "@color/purple_500"
-        android:endColor = "#CC6200EE"/>
+        android:startColor = "@color/button_color"
+        android:endColor = "@color/button_color_pressed"/>
 </shape>

@@ -8,7 +8,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="white1">#CCFFFFFF</color>
+    <color name="white1">#80FFFFFF</color>
     <color name="y_400">#FFEE58</color>
     <color name="g_400">#66BB6A</color>
+    <color name="button_color">#FF6200EE</color>
+    <color name="button_color_pressed">#CC6200EE</color>
+    <color name="statusBarColor">#FF6200EE</color>
 </resources>

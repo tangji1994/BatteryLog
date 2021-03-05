@@ -5,12 +5,11 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
+import android.graphics.Color
 import android.os.*
 import android.os.BatteryManager.*
 import android.util.Log
-import android.view.Menu
-import android.view.MenuItem
-import android.view.View
+import android.view.*
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -34,6 +33,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         listname = listOf(
             "status",
             "health",
@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
         recyclerView = findViewById<View>(R.id.battery_info_recycler_view) as RecyclerView
         val layoutManager = LinearLayoutManager(this)
         recyclerView.layoutManager = layoutManager
-        recyclerView.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
+        //recyclerView.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
         (recyclerView.itemAnimator as SimpleItemAnimator?)!!.supportsChangeAnimations = false
         adapter = BatteryInfoRecyclerViewAdapter(
             mutableMap, listname, listOf(
@@ -91,6 +91,10 @@ class MainActivity : AppCompatActivity() {
         when (item.itemId) {
             R.id.main_menu_setting_item -> {
                 val intent = Intent(this@MainActivity, SettingsActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.main_menu_about_item ->{
+                val intent = Intent(this@MainActivity, AboutActivity::class.java)
                 startActivity(intent)
             }
         }

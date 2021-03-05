@@ -60,7 +60,7 @@
     <string name="cancel">Cancel</string>
     <string name="alert_massage_all">Are you sure to delete all data? Unable to restore after deletion!</string>
     <string name="log_list">History</string>
-    <string name="open_the_chart">Open the chart</string>
+    <string name="open_the_chart">Open the Graph</string>
     <string name="open_list">Open list</string>
     <string name="delete">Delete</string>
     <string name="delete_all">Delete All</string>
@@ -68,4 +68,27 @@
     <string name="battery_full_mas">The battery is full, please remove the charger and start recording</string>
     <string name="open_app">OPEN APP</string>
     <string name="time">time</string>
+    <string name="main_menu_about_item">About</string>
+    <string name="about_app">About APP</string>
+    <string name="about_app_info">Batterylog is a software to record the battery voltage, current, temperature and other parameters, which can be used to test the charge discharge curve and temperature of the battery. The recorded data can be drawn as a graph or exported and saved in CVS format.</string>
+    <string name="about_license">License</string>
+    <string name="about_app_license">
+Copyright © 2021 tangji1994@qq.com. All Rights Reserved.
+\nLicensed under the Apache License, Version 2.0 (the "License");
+\nyou may not use this file except in compliance with the License.
+\nYou may obtain a copy of the License at
+\n
+\n    http://www.apache.org/licenses/LICENSE-2.0
+\n
+\nUnless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+            \n
+        \nThis project refers to the following open source project code
+            \nMPAndroidChart
+        \n
+        \n    https://github.com/PhilJay/MPAndroidChart
+    </string>
 </resources>
