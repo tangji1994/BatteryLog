@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2962FF"
     tools:context=".LineListActivity">
 
     <LinearLayout
         android:id="@+id/lineListActivity_linearLayout"
-        android:background="?attr/colorPrimary"
         android:layout_width="0dp"
+
         android:layout_height="wrap_content"
+        android:background="#303F9F"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/lineListActivity_recyclerView"
@@ -25,7 +27,7 @@
             android:layout_weight="1"
             android:gravity="center_horizontal"
             android:text="@string/time"
-            android:textColor="?attr/colorOnPrimary"
+            android:textColor="@color/white"
             android:textSize="18sp" />
 
         <TextView
@@ -35,7 +37,7 @@
             android:layout_weight="1"
             android:gravity="center_horizontal"
             android:text="@string/level"
-            android:textColor="?attr/colorOnPrimary"
+            android:textColor="@color/white"
             android:textSize="18sp" />
 
         <TextView
@@ -45,7 +47,7 @@
             android:layout_weight="1"
             android:gravity="center_horizontal"
             android:text="@string/temperature"
-            android:textColor="?attr/colorOnPrimary"
+            android:textColor="@color/white"
             android:textSize="18sp" />
 
         <TextView
@@ -55,7 +57,7 @@
             android:layout_weight="1"
             android:gravity="center_horizontal"
             android:text="@string/voltage"
-            android:textColor="?attr/colorOnPrimary"
+            android:textColor="@color/white"
             android:textSize="18sp" />
 
         <TextView
@@ -64,8 +66,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center_horizontal"
-            android:text="@string/status"
-            android:textColor="?attr/colorOnPrimary"
+            android:text="状态"
+            android:textColor="@color/white"
             android:textSize="18sp" />
     </LinearLayout>
 

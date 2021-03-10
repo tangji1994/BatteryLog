@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-
     android:layout_marginTop="3dp"
+
     android:orientation="horizontal"
     android:padding="1dp">
 
@@ -15,14 +15,15 @@
         android:orientation="vertical">
 
         <TextView
-
             android:id="@+id/test_list_recyclerview_item_textView"
-            style="@style/button_color"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="1dp"
             android:layout_weight="1"
+            android:background="@drawable/buttonbg"
             android:gravity="center_vertical"
-            android:textColor="?attr/colorOnPrimary"
+            android:textColor="#FFFFFF"
             android:textSize="24sp" />
 
         <LinearLayout
@@ -33,34 +34,36 @@
 
             <Button
                 android:id="@+id/test_list_recyclerview_item_chartButton"
-                style="@style/button_color"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="1dp"
                 android:layout_weight="1"
+                android:background="@drawable/buttonbg"
                 android:drawableLeft="@drawable/ic_baseline_show_chart_24"
-                android:text="@string/open_the_chart"
-                android:textSize="11sp" />
+                android:text="@string/open_the_chart" />
 
             <Button
                 android:id="@+id/test_list_recyclerview_item_listButton"
-                style="@style/button_color"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="1dp"
                 android:layout_weight="1"
+                android:background="@drawable/buttonbg"
                 android:drawableLeft="@drawable/ic_baseline_table_rows_24"
-                android:text="@string/open_list"
-                android:textSize="11sp" />
+                android:text="@string/open_list" />
         </LinearLayout>
     </LinearLayout>
 
     <Button
         android:id="@+id/test_list_recyclerview_item_deleteButton"
-        style="@style/button_color"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="2"
+        android:background="@drawable/buttonbg"
         android:drawableTop="@drawable/ic_baseline_delete_24"
+        android:drawablePadding="-20sp"
         android:text="@string/delete"
-        android:textSize="14sp" />
+        android:textColor="#FFFFFFFF"
+        android:textSize="18sp" />
 
 </LinearLayout>
