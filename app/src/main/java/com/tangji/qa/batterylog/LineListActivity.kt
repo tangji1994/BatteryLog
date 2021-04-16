@@ -2,6 +2,7 @@ package com.tangji.qa.batterylog
 
 import android.annotation.SuppressLint
 import android.icu.text.SimpleDateFormat
+import android.os.BatteryManager
 import android.os.Bundle
 import android.os.Environment
 import android.view.Menu
@@ -122,10 +123,38 @@ class LineListActivity : AppCompatActivity() {
         try {
             val fileOutputStream = FileOutputStream(file)
             bufferedWriter = BufferedWriter(OutputStreamWriter(fileOutputStream))
+            val line =
+                getString(R.string.time) + "," + getString(R.string.level) + "," + getString(R.string.temperature) + "," + getString(R.string.voltage) + "," + getString(R.string.status) + "\r\n"
+            bufferedWriter.write(line)
+            var status = ""
+            when(dataList.first().status)
+            {
+                BatteryManager.BATTERY_STATUS_UNKNOWN -> status= getString(R.string.BATTERY_STATUS_UNKNOWN)
+                BatteryManager.BATTERY_STATUS_CHARGING -> status= getString(R.string.BATTERY_STATUS_CHARGING)
+                BatteryManager.BATTERY_STATUS_DISCHARGING -> status= getString(R.string.BATTERY_STATUS_DISCHARGING)
+                BatteryManager.BATTERY_STATUS_NOT_CHARGING -> status= getString(R.string.BATTERY_STATUS_NOT_CHARGING)
+                BatteryManager.BATTERY_STATUS_FULL -> status= getString(R.string.BATTERY_STATUS_FULL)
+            }
+            val line1 =
+                longToDate(dataList.first().title+dataList.first().time) + "," + dataList.first().level.toString()+"%" + "," + ((dataList.first().temperature).toFloat()/10).toString() + "," + dataList.first().voltage.toString()+"mV" + "," +status + "\r\n"
+            bufferedWriter.write(line1)
+
+            var level = dataList.first().level
             for (item in dataList) {
-                val line =
-                    item.time.toString() + "," + item.level.toString() + "," + item.temperature.toString() + "," + item.voltage.toString() + "," + item.status.toString() + "\r\n"
-                bufferedWriter.write(line)
+                if (item.level!=level ||level==dataList.last().level){
+                    level=item.level
+                    var status1 = ""
+                    when(item.status)
+                    {
+                        BatteryManager.BATTERY_STATUS_UNKNOWN -> status1= getString(R.string.BATTERY_STATUS_UNKNOWN)
+                        BatteryManager.BATTERY_STATUS_CHARGING -> status1= getString(R.string.BATTERY_STATUS_CHARGING)
+                        BatteryManager.BATTERY_STATUS_DISCHARGING -> status1= getString(R.string.BATTERY_STATUS_DISCHARGING)
+                        BatteryManager.BATTERY_STATUS_NOT_CHARGING -> status1= getString(R.string.BATTERY_STATUS_NOT_CHARGING)
+                        BatteryManager.BATTERY_STATUS_FULL -> status1= getString(R.string.BATTERY_STATUS_FULL)
+                    }
+                val line2 =
+                    longToDate(item.title+item.time) + "," + item.level.toString()+"%" + "," + ((item.temperature.toFloat())/10).toString() + "," + item.voltage.toString()+"mV" + "," + status1 + "\r\n"
+                bufferedWriter.write(line2)}
             }
             isSuccessful=true
         }catch (e: Exception) {
