@@ -5,6 +5,7 @@ import android.icu.text.SimpleDateFormat
 import android.os.BatteryManager
 import android.os.Bundle
 import android.os.Environment
+import android.util.Xml
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -21,6 +22,8 @@ import java.io.BufferedWriter
 import java.io.File
 import java.io.FileOutputStream
 import java.io.OutputStreamWriter
+import java.nio.charset.Charset
+import java.nio.charset.CharsetEncoder
 import java.util.*
 
 
@@ -122,7 +125,7 @@ class LineListActivity : AppCompatActivity() {
         var bufferedWriter: BufferedWriter? =null
         try {
             val fileOutputStream = FileOutputStream(file)
-            bufferedWriter = BufferedWriter(OutputStreamWriter(fileOutputStream))
+            bufferedWriter = BufferedWriter(OutputStreamWriter(fileOutputStream, "gb2312"))
             val line =
                 getString(R.string.time) + "," + getString(R.string.level) + "," + getString(R.string.temperature) + "," + getString(R.string.voltage) + "," + getString(R.string.status) + "\r\n"
             bufferedWriter.write(line)
@@ -136,7 +139,7 @@ class LineListActivity : AppCompatActivity() {
                 BatteryManager.BATTERY_STATUS_FULL -> status= getString(R.string.BATTERY_STATUS_FULL)
             }
             val line1 =
-                longToDate(dataList.first().title+dataList.first().time) + "," + dataList.first().level.toString()+"%" + "," + ((dataList.first().temperature).toFloat()/10).toString() + "," + dataList.first().voltage.toString()+"mV" + "," +status + "\r\n"
+                longToDate(dataList.first().title+dataList.first().time) + "," + dataList.first().level.toString()+"%" + "," + ((dataList.first().temperature).toFloat()/10).toString() + "℃" +"," + dataList.first().voltage.toString()+"mV" + "," +status + "\r\n"
             bufferedWriter.write(line1)
 
             var level = dataList.first().level
@@ -153,7 +156,7 @@ class LineListActivity : AppCompatActivity() {
                         BatteryManager.BATTERY_STATUS_FULL -> status1= getString(R.string.BATTERY_STATUS_FULL)
                     }
                 val line2 =
-                    longToDate(item.title+item.time) + "," + item.level.toString()+"%" + "," + ((item.temperature.toFloat())/10).toString() + "," + item.voltage.toString()+"mV" + "," + status1 + "\r\n"
+                    longToDate(item.title+item.time) + "," + item.level.toString()+"%" + "," + ((item.temperature.toFloat())/10).toString() + "℃" +"," + item.voltage.toString()+"mV" + "," + status1 + "\r\n"
                 bufferedWriter.write(line2)}
             }
             isSuccessful=true
