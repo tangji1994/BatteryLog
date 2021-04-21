@@ -67,7 +67,7 @@ class LineChartActivity : AppCompatActivity(), SharedPreferences.OnSharedPrefere
                     View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION or
                     View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
         val intent = intent
-        initCheckBox()
+
         val lineCharViewMode : LineChartViewMode by viewModels {
             LineChartViewModeFactory(
                 (application as BatteryLogApplication).repository, intent.getLongExtra(
@@ -89,6 +89,8 @@ class LineChartActivity : AppCompatActivity(), SharedPreferences.OnSharedPrefere
             batteryInfo=testLog
             upData()
         }
+
+        initCheckBox()
     }
 
     private fun initCheckBox() {
